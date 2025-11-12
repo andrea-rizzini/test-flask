@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo suono Python</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 8px;
+      border: none;
+      background: #007bff;
+      color: white;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔊 Suono generato da Python</h1>
+  <button onclick="playSound()">Suona!</button>
+
+  <script>
+    async function playSound() {
+      const audio = new Audio("/audio");
+      await audio.play();
+    }
+  </script>
+</body>
+</html>
